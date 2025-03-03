@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./tailwind_styles/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <style>
+        .poppins-thin {
+            font-family: "Poppins", sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body class="poppins-thin bg-[#F4F7FF]">
+    <header class="bg-white flex justify-between max-w-screen-2xl mx-auto rounded-xl p-3 items-center">
+        <!----- Navbar ----->
+        <nav class="flex justify-between rounded-2xl">
+            <div class="flex items-center p-1.5">
+                <img src="./assets/logo.png">
+                <h1 class="text-3xl pl-1.5">Dev <span class="font-bold">Board</span></h1>
+            </div>
+        </nav>
+        <a href="./index.html"><button class="btn btn-active btn-primary bg-[#3752FD]">
+            Back to Desk
+        </button></a> 
+    </header>
+    <main class="max-w-screen-2xl mx-auto pb-5">
+        <h1 class="text-center font-bold text-4xl p-5">Blogs</h1>
+        <section class="space-y-5">
+            <div  class="bg-white rounded-xl p-5">
+                <p class="font-bold py-4">
+                    Question-1: What are the different ways to select an element in the DOM?
+                </p>
+                <p class="border-t border-dashed border-gray-400 py-4">
+                    DOM (Document Object Model), here are some ways to select elements by using JavaScript. They are:
+                    <ol type="i">
+                        <li>ID</li>
+                        <li>Class Name</li>
+                        <li>Tag Name</li>
+                        <li>Query Selector</li>
+                    </ol>
+                </p>
+            </div>
+            <div class="bg-white rounded-xl p-5">
+                <p class="font-bold py-4">
+                    Question-2: What is the difference between innerHTML, innerText, and textContent ?
+                </p>
+                <p class="border-t border-dashed border-gray-400 py-4">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>innerHTML</th>
+                                <th>innerText</th>
+                                <th>textContent</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Gets or sets HTML content inside an element.
+                                    Parses any HTML tags inside the string.</td>
+                                <td>Gets or sets the visible text inside an element.
+                                        Ignores hidden elements (e.g., display: none).
+                                        Automatically trims extra spaces.</td>
+                                <td>Gets or sets all text, including hidden elements.
+                                    Preserves spacing.
+                                    Does not parse HTML.</td>    
+                            </tr>
+                        </tbody>
+                    </table>
+                </p>
+            </div>
+            <div class="bg-white rounded-xl p-5">
+                <p class="font-bold py-4">
+                    Question-3: What is event delegation in the DOM?
+                </p>
+                <p class="border-t border-dashed border-gray-400 py-4">
+                    Delegation is a technique in JavaScript where a single event listener is added to a parent element instead of multiple event listeners on individual child elements. The event bubbles up from the target element to the parent, allowing efficient event handling.
+                </p>
+            </div>
+            <div class="bg-white rounded-xl p-5">
+                <p class="font-bold py-4">
+                    Question-4: What is event bubbling in the DOM?
+                </p>
+                <p class="border-t border-dashed border-gray-400 py-4">
+                    Event bubbling is a mechanism in the DOM where an event starts from the target element and propagates (bubbles) up through its ancestors until it reaches the document root.
+                </p>
+            </div>
+            <div class="bg-white rounded-xl p-5">
+                <p class="font-bold py-4">
+                    Question-5: How do you create, add, and remove elements using JavaScript?
+                </p>
+                <p class="border-t border-dashed border-gray-400 py-4">To create, add, and remove elements in DOM uses different methods, like:
+                    <ol type="i">
+                        <li>Create Elements: document.createElement('btn')</li>
+                        <li>Add Elements: docuemnt.body.appendChild(div)</li>
+                        <li>Remove Elements: document.body.removeChild(div)</li>
+                    </ol>
+                </p>
+            </div>
+        </section>
+    </main>
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
